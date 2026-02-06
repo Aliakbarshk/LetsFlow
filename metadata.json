@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Let's Flow Portfolio",
+  "description": "A high-performance portfolio for Let's Flow, specializing in WhatsApp automation and AI call agents. Features a live AI-powered WhatsApp demo, 3D interactive elements, and modern minimalist design.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

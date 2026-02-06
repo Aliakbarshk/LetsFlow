@@ -1,0 +1,51 @@
+
+LET'S FLOW - PORTFOLIO MANUAL
+=============================
+
+PROJECT STRUCTURE
+-----------------
+1. index.tsx: Application entry point (React 18).
+2. index.html: Main HTML template with Tailwind CSS and Font imports.
+3. App.tsx: Main application layout and routing (HashRouter).
+4. types.ts: TypeScript interfaces for messages and services.
+5. constants.tsx: Theme constants and SVG icons.
+6. components/:
+   - Navbar.tsx: Sticky navigation with modern blur effects.
+   - Hero.tsx: Visual entry with 3D-transformed elements.
+   - WhatsAppDemo.tsx: Interactive AI-powered chat simulator using Gemini API.
+   - Services.tsx: Grid of core offerings (WhatsApp Automation, AI Agents).
+   - ContactForm.tsx: Functional form UI.
+   - Footer.tsx: Standard links and branding.
+7. pages/:
+   - Home.tsx: Landing page composite.
+   - FAQ.tsx: Clean accordion-style FAQ.
+   - Terms.tsx: Legal documentation page.
+8. services/geminiService.ts: Logic for the AI agent in the WhatsApp demo.
+
+BACKEND INTEGRATION GUIDE
+-------------------------
+The Contact Form in `components/ContactForm.tsx` is currently a client-side mock. To connect it to a real database:
+
+1. API Endpoint:
+   Create a POST endpoint (e.g., `/api/contact`) on your server (Node.js/Express, Python/FastAPI, etc.).
+
+2. Database:
+   - For MongoDB: Use Mongoose to save the `formData` object.
+   - For SQL: Use an ORM like Prisma or Sequelize to insert a row into a `leads` table.
+
+3. Frontend Connection:
+   In `ContactForm.tsx`, replace the `console.log` in `handleSubmit` with a fetch call:
+   ```ts
+   const response = await fetch('YOUR_BACKEND_URL', {
+     method: 'POST',
+     headers: { 'Content-Type': 'application/json' },
+     body: JSON.stringify(formData),
+   });
+   ```
+
+4. Third-Party Alternatives:
+   If you don't want to manage a backend, you can use services like Formspree or Netlify Forms by setting the form action URL.
+
+WHATSAPP API POWER
+------------------
+The demo uses the Gemini 3 Flash model to simulate a highly intelligent WhatsApp Bot. This showcases the logic your brand "Let's Flow" implements for clients using the official WhatsApp Business API.
