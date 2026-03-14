@@ -1,7 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowUpRight, Hexagon } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+
+import logo from '@/assets/thelogo.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +27,12 @@ const Navbar: React.FC = () => {
       <div className={`max-w-7xl mx-auto px-6 transition-all duration-700 ${scrolled ? 'glass-bespoke rounded-full py-3 px-8 mx-6 md:mx-auto border-white/10' : ''}`}>
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <Hexagon size={32} className="text-[#00f2ff] group-hover:rotate-180 transition-transform duration-1000" />
-              <div className="absolute inset-0 flex items-center justify-center font-black text-xs">F</div>
-            </div>
-            <span className="text-lg font-black tracking-[0.3em] uppercase hidden sm:block">Let's Flow</span>
+            <img
+              src={logo}
+              alt="Let's Flow"
+              className="h-9 w-auto object-contain"
+              loading="lazy"
+            />
           </Link>
 
           {/* Desktop Nav */}

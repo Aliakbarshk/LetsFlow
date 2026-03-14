@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Hexagon } from 'lucide-react';
+import logo from '@/assets/thelogo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -10,8 +10,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
           <div className="space-y-8">
             <Link to="/" className="flex items-center space-x-4 group">
-              <Hexagon size={48} className="text-[#25d366] group-hover:rotate-180 transition-transform duration-1000" />
-              <h3 className="text-3xl font-black uppercase tracking-tighter">Let's Flow</h3>
+              <img
+                src={logo}
+                alt="Let's Flow"
+                className="h-12 w-auto object-contain"
+                loading="lazy"
+              />
             </Link>
             <p className="text-xl font-light text-white/30 max-w-sm leading-relaxed italic">
               "Infinite Scale. Zero Manual Labor."
