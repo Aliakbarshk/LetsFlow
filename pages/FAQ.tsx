@@ -1,10 +1,14 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { FAQS } from '../constants';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  useEffect(() => {
+    document.title = "Intel & FAQs | Let's Flow";
+  }, []);
 
   return (
     <div className="pt-40 pb-20 max-w-3xl mx-auto px-6 animate-in fade-in slide-in-from-bottom-8 duration-700">

@@ -10,6 +10,10 @@ const Home: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = "Let's Flow | WhatsApp Automation & AI Call Agents";
+  }, []);
+
+  useEffect(() => {
     const rawPath = location.pathname.replace('/', '').toLowerCase();
     const hash = location.hash ? location.hash.replace('#', '').toLowerCase() : '';
     const target = rawPath || hash;

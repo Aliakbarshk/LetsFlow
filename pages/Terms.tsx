@@ -1,7 +1,10 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Terms: React.FC = () => {
+  useEffect(() => {
+    document.title = "Protocol & Terms | Let's Flow";
+  }, []);
   return (
     <div className="pt-40 pb-20 max-w-4xl mx-auto px-6 animate-in fade-in duration-700">
       <h1 className="text-5xl font-bold mb-12">Terms & Conditions</h1>
