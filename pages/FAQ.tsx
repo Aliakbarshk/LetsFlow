@@ -7,7 +7,7 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   useEffect(() => {
-    document.title = "Intel & FAQs | Let's Flow";
+    document.title = "Let's Flow | Intel & FAQs";
   }, []);
 
   return (

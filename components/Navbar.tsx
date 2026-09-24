@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Flow', path: '/', action: handleFlowClick },
+    { name: "Let's Flow", path: '/', action: handleFlowClick },
     { name: 'Healthcare', path: '/#healthcare', action: () => handleScrollToSection('healthcare') },
     { name: 'Systems', path: '/#services', action: () => handleScrollToSection('services') },
     { name: 'Intel', path: '/faq' },

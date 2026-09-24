@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 const Terms: React.FC = () => {
   useEffect(() => {
-    document.title = "Protocol & Terms | Let's Flow";
+    document.title = "Let's Flow | Protocol & Terms";
   }, []);
   return (
     <div className="pt-40 pb-20 max-w-4xl mx-auto px-6 animate-in fade-in duration-700">
