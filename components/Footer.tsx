@@ -37,8 +37,8 @@ const Footer: React.FC = () => {
                 loading="lazy"
               />
             </Link>
-            <p className="text-xl font-light text-white/30 max-w-sm leading-relaxed italic">
-              "Infinite Scale. Zero Manual Labor."
+            <p className="text-lg font-light text-white/40 max-w-sm leading-relaxed">
+              "Built for Healthcare. Flexible for Every Business."
             </p>
           </div>
 
@@ -46,6 +46,24 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#25d366]">Systems</h4>
               <ul className="space-y-3 text-sm font-bold opacity-40">
+                <li>
+                  <button 
+                    type="button" 
+                    onClick={() => handleScrollTo('healthcare')} 
+                    className="hover:text-[#00f2ff] transition-colors cursor-pointer text-left"
+                  >
+                    Hospital Automation
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    type="button" 
+                    onClick={() => handleScrollTo('services')} 
+                    className="hover:text-[#25d366] transition-colors cursor-pointer text-left"
+                  >
+                    Lead Management
+                  </button>
+                </li>
                 <li>
                   <button 
                     type="button" 
@@ -61,25 +79,16 @@ const Footer: React.FC = () => {
                     onClick={() => handleScrollTo('services')} 
                     className="hover:text-[#00f2ff] transition-colors cursor-pointer text-left"
                   >
-                    Automation
+                    Scheduled Messaging
                   </button>
                 </li>
                 <li>
                   <button 
                     type="button" 
-                    onClick={() => handleScrollTo('services')} 
+                    onClick={() => handleScrollTo('custom-automation')} 
                     className="hover:text-[#00f2ff] transition-colors cursor-pointer text-left"
                   >
-                    Workflows
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    type="button" 
-                    onClick={() => handleScrollTo('demo')} 
-                    className="hover:text-[#25d366] transition-colors cursor-pointer text-left"
-                  >
-                    Bulk Queries
+                    Custom Workflows
                   </button>
                 </li>
               </ul>
@@ -129,10 +138,6 @@ const Footer: React.FC = () => {
           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/10">
             &copy; {new Date().getFullYear()} Let's Flow - Scale Smarter.
           </p>
-          <div className="flex items-center space-x-3">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" className="w-4 h-4" alt="WA" />
-             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Official Business Partner</span>
-          </div>
         </div>
       </div>
     </footer>

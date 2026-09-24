@@ -101,13 +101,14 @@ const ContactForm: React.FC = () => {
     <section id="contact" className="py-40 relative bg-black">
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal className="text-center mb-16">
-          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8">
-            Ready to <br />
-            <span className="text-[#00f2ff]">Flow?</span>
+          <span className="text-[#00f2ff] text-xs font-black tracking-[0.4em] uppercase block mb-4">Start Your Automation</span>
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight mb-8">
+            Tell us what your team does manually. <br />
+            <span className="text-[#00f2ff]">We'll map what can be automated.</span>
           </h2>
 
-          <p className="text-white/40 text-xl font-medium max-w-xl mx-auto">
-            Let's map your brand's automated future today. Connect directly via voice, WhatsApp, email, or initiate a project brief below.
+          <p className="text-white/50 text-base sm:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+            Built for healthcare organizations and flexible for every business. Connect directly via WhatsApp, phone, or email, or share your workflow below to explore an automated solution.
           </p>
         </ScrollReveal>
 
@@ -269,13 +270,13 @@ const ContactForm: React.FC = () => {
               </label>
 
               <textarea
-                rows={2}
+                rows={3}
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full bg-transparent text-2xl font-bold focus:outline-none resize-none placeholder:text-white/5"
-                placeholder="What objective are we automating?"
+                className="w-full bg-transparent text-lg sm:text-xl font-medium focus:outline-none resize-none placeholder:text-white/20 text-white leading-relaxed"
+                placeholder="Describe what your team currently does manually (e.g., patient appointment follow-ups, enquiry logging, WhatsApp lead routing, scheduled reminders)..."
               />
             </div>
 

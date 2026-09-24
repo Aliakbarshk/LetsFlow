@@ -15,53 +15,53 @@ interface PreRecordedScenario {
 
 const SCENARIOS: PreRecordedScenario[] = [
   {
+    id: 'hospital_enquiry',
+    label: 'Hospital OPD & Timings Bot',
+    icon: '🏥',
+    userText: 'What are the OPD consultation hours for Cardiology this week?',
+    botResponse: 'Cardiology OPD with Dr. Sharma is open Mon, Wed & Fri from 10:00 AM – 1:30 PM. Room #204, Block B. Would you like to request an appointment slot or front-desk callback?'
+  },
+  {
+    id: 'appointment_reminder',
+    label: 'Appointment & Rescheduling',
+    icon: '📅',
+    userText: 'Can I reschedule my check-up appointment from tomorrow?',
+    botResponse: 'Certainly! Your current slot is tomorrow at 11:00 AM. Available alternate slots are Thursday at 2:00 PM or Friday at 11:30 AM. Reply 1 or 2 to confirm your new time.'
+  },
+  {
+    id: 'lead_qualification',
+    label: 'Lead Capture & Intake Bot',
+    icon: '⚡',
+    userText: 'We receive 200+ enquiries daily and need an automated workflow.',
+    botResponse: 'We can automate that! 🚀 Our pipeline captures each lead, organizes details in your database, immediately alerts your sales team on WhatsApp, and schedules follow-up messages.'
+  },
+  {
     id: 'customer_support',
     label: 'Customer Support Bot',
     icon: '🎧',
-    userText: 'I have an issue with my recent delivery.',
-    botResponse: 'I am sorry to hear that! 📦 I have located your order #LF-992. Our logistics team is resolving it right now. You will receive an update in 15 mins. Anything else?'
-  },
-  {
-    id: 'coffee_shop',
-    label: 'Coffee Shop Parody',
-    icon: '☕',
-    userText: 'Can I get a large Iced Latte with extra foam?',
-    botResponse: 'Coming right up! 🧊 One Large Iced Latte. Your total is $5.50. You can pick it up at the counter in 5 minutes!'
-  },
-  {
-    id: 'bulk_query',
-    label: 'Bulk Query Manager',
-    userText: 'Can you handle 10,000 queries at once?',
-    icon: '📊',
-    botResponse: 'Absolutely. 🚀 Our architecture manages millions of bulk queries simultaneously using the official WhatsApp API, ensuring zero manual labor for your team.'
-  },
-  {
-    id: 'demo_book',
-    label: 'Strategy Booking',
-    icon: '📅',
-    userText: 'I want to schedule a strategy call.',
-    botResponse: 'Great choice! 🗓️ Our next availability is tomorrow at 10:00 AM. Would you like to confirm this slot?'
+    userText: 'I have an issue with my service account #LF-992.',
+    botResponse: 'Ticket #LF-992 is logged. Our support desk has received your request and assigned it to a representative. Expected response time is within 15 minutes.'
   }
 ];
 
 const PARODY_SCENARIOS = [
   {
-    label: 'Luxury Real Estate',
-    icon: '🏰',
-    userText: 'Show me penthouses available in downtown with skyline views.',
-    botResponse: 'Right away! 🏙️ We have 3 exclusive penthouses matching your requirements ($1.8M - $3.4M). I have sent the 3D tour link. Would you like to book a private showing?'
-  },
-  {
-    label: 'E-Commerce AI Store',
-    icon: '🛍️',
-    userText: 'Do you have size 10 in the UltraFlow runner shoes in black?',
-    botResponse: 'Checking live inventory... 👟 Yes! 4 pairs left in size 10 Black. Apply code FLOW20 for 20% off at checkout: letsflow.shop/cart/uf10'
-  },
-  {
-    label: 'Automated Clinic Assistant',
+    label: 'Hospital Lab Report Bot',
     icon: '🩺',
-    userText: 'Can I reschedule my appointment with Dr. Adams to Friday?',
-    botResponse: 'Certainly! Dr. Adams has openings this Friday at 11:30 AM and 3:00 PM. Reply 1 or 2 to confirm your new slot instantly.'
+    userText: 'Is my blood pathology test report ready for download?',
+    botResponse: 'Yes! Report for Patient ID #P-4821 is verified. We have sent the secure PDF download link to your registered mobile number.'
+  },
+  {
+    label: 'Diagnostic Center Booking',
+    icon: '🔬',
+    userText: 'I need to schedule an ultrasound scan for Saturday morning.',
+    botResponse: 'Available slots for Saturday Ultrasound are 9:30 AM and 11:00 AM at the West Wing Diagnostic Center. Fasting instructions will follow confirmation.'
+  },
+  {
+    label: 'Corporate Lead Intake',
+    icon: '🏢',
+    userText: 'We need custom workflow automation between our web form and WhatsApp.',
+    botResponse: 'Understood! We map your webhooks to our official WhatsApp API gateway, triggering automatic staff notifications and scheduled prospect follow-ups.'
   }
 ];
 
@@ -257,7 +257,11 @@ const WhatsAppDemo: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         
         <ScrollReveal className="text-center mb-16 space-y-4">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">Demo</h2>
+          <span className="text-[#25d366] text-xs font-black tracking-[0.4em] uppercase">Interactive Automation Sandbox</span>
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">System Demo</h2>
+          <p className="text-sm text-white/50 max-w-xl mx-auto">
+            Test simulated conversational workflows below. These scenarios illustrate possible automation patterns across patient enquiries, scheduling, and lead routing.
+          </p>
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full">
             <Info size={14} className="text-[#25d366]" />
             <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">
