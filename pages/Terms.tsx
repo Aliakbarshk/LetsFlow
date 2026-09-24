@@ -34,6 +34,17 @@ const Terms: React.FC = () => {
             We take data privacy seriously. Any data processed through our AI agents or WhatsApp bots is handled according to our Privacy Policy and relevant international data protection laws (GDPR/CCPA).
           </p>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">5. Contact Information</h2>
+          <p>
+            For any questions, legal queries, or strategic onboarding regarding our services, you can reach out directly via:
+          </p>
+          <ul className="list-disc list-inside mt-3 space-y-2 text-white/80">
+            <li>Phone & WhatsApp: <a href="tel:+918482934502" className="text-[#25d366] hover:underline">+91 84829 34502</a></li>
+            <li>Email: <a href="mailto:letsflowmanagement@gmail.com" className="text-[#00f2ff] hover:underline">letsflowmanagement@gmail.com</a></li>
+          </ul>
+        </section>
         
         <div className="p-8 glass rounded-3xl border-emerald-500/20 bg-emerald-500/5 text-sm">
           <strong>Note:</strong> These terms are subject to change. We recommend checking this page regularly for updates.

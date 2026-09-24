@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 import logo from '@/assets/thelogo.png';
@@ -9,12 +9,33 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleInitiateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      const el = document.getElementById('contact');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      navigate('/contact');
+    }
+  };
+
+  const handleFlowClick = () => {
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const navLinks = [
     { name: 'Flow', path: '/' },
@@ -26,7 +47,7 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${scrolled ? 'py-4' : 'py-8'}`}>
       <div className={`max-w-7xl mx-auto px-6 transition-all duration-700 ${scrolled ? 'glass-bespoke rounded-full py-3 px-8 mx-6 md:mx-auto border-white/10' : ''}`}>
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" onClick={handleFlowClick} className="flex items-center space-x-3 group">
             <img
               src={logo}
               alt="Let's Flow"
@@ -40,19 +61,24 @@ const Navbar: React.FC = () => {
             {navLinks.map((link) => (
               <Link 
                 key={link.path} 
-                to={link.path} 
+                to={link.path}
+                onClick={link.path === '/' ? handleFlowClick : undefined}
                 className={`text-[10px] font-black uppercase tracking-[0.4em] transition-all hover:text-[#00f2ff] ${location.pathname === link.path ? 'text-[#00f2ff]' : 'text-white/40'}`}
               >
                 {link.name}
               </Link>
             ))}
-            <a href="#contact" className="px-6 py-2 border border-white/10 hover:border-[#00f2ff] rounded-full text-[10px] font-black uppercase tracking-widest flex items-center group transition-all">
+            <button 
+              type="button"
+              onClick={handleInitiateClick} 
+              className="px-6 py-2 border border-white/10 hover:border-[#00f2ff] rounded-full text-[10px] font-black uppercase tracking-widest flex items-center group transition-all cursor-pointer text-white"
+            >
               Initiate
               <ArrowUpRight className="ml-2 w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            </button>
           </div>
 
-          <button className="md:hidden text-white/50" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-white/50 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -66,15 +92,22 @@ const Navbar: React.FC = () => {
               key={link.path} 
               to={link.path} 
               className="text-4xl font-black uppercase tracking-widest text-white/20 hover:text-[#00f2ff] transition-all"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                if (link.path === '/') handleFlowClick();
+              }}
             >
               {link.name}
             </Link>
           ))}
-          <a href="#contact" className="text-xl font-black uppercase tracking-widest text-[#00f2ff]" onClick={() => setIsOpen(false)}>
+          <button 
+            type="button"
+            onClick={handleInitiateClick}
+            className="text-xl font-black uppercase tracking-widest text-[#00f2ff] cursor-pointer"
+          >
             Initiate Contact
-          </a>
-          <button onClick={() => setIsOpen(false)} className="mt-12 p-4 border border-white/10 rounded-full">
+          </button>
+          <button onClick={() => setIsOpen(false)} className="mt-12 p-4 border border-white/10 rounded-full cursor-pointer">
             <X size={24} />
           </button>
         </div>

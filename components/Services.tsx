@@ -5,6 +5,19 @@ import ScrollReveal from './ScrollReveal';
 import { ArrowUpRight } from 'lucide-react';
 
 const Services: React.FC = () => {
+  const handleServiceClick = (title: string) => {
+    const el = document.getElementById('contact');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const textarea = el.querySelector('textarea');
+      if (textarea) {
+        textarea.value = `Inquiry regarding ${title}: `;
+        textarea.dispatchEvent(new Event('input', { bubbles: true }));
+        textarea.focus();
+      }
+    }
+  };
+
   return (
     <section id="services" className="py-40 bg-black relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -26,15 +39,23 @@ const Services: React.FC = () => {
               <ScrollReveal 
                 key={idx} 
                 delay={idx * 150}
-                className={`${span} group relative h-[450px]`}
+                className={`${span} group relative h-[450px] cursor-pointer`}
               >
-                <div className="absolute inset-0 bg-white/[0.02] rounded-[3rem] border border-white/10 transition-all duration-700 group-hover:bg-[#00f2ff]/5 group-hover:border-[#00f2ff]/30"></div>
-                <div className="relative h-full p-12 flex flex-col justify-between">
-                  <div className="flex justify-between items-start">
+                <div 
+                  onClick={() => handleServiceClick(service.title)}
+                  className="absolute inset-0 bg-white/[0.02] rounded-[3rem] border border-white/10 transition-all duration-700 group-hover:bg-[#00f2ff]/5 group-hover:border-[#00f2ff]/30"
+                ></div>
+                <div className="relative h-full p-12 flex flex-col justify-between pointer-events-none">
+                  <div className="flex justify-between items-start pointer-events-auto">
                     <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                       {service.icon}
                     </div>
-                    <button className="opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-white rounded-full text-black">
+                    <button 
+                      type="button"
+                      onClick={() => handleServiceClick(service.title)}
+                      className="opacity-0 group-hover:opacity-100 transition-opacity p-2 bg-white hover:bg-[#00f2ff] rounded-full text-black cursor-pointer shadow-lg"
+                      title={`Inquire about ${service.title}`}
+                    >
                       <ArrowUpRight size={20} />
                     </button>
                   </div>

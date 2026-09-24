@@ -1,12 +1,26 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+let aiInstance: GoogleGenAI | null = null;
+
+const getAIClient = (): GoogleGenAI | null => {
+  const key = process.env.API_KEY || process.env.GEMINI_API_KEY;
+  if (!key) return null;
+  if (!aiInstance) {
+    aiInstance = new GoogleGenAI({ apiKey: key });
+  }
+  return aiInstance;
+};
 
 export const getAIAgentResponse = async (userInput: string): Promise<string> => {
   try {
+    const ai = getAIClient();
+    if (!ai) {
+      return "Let's Flow is here to help! Connect with us to automate your WhatsApp workflows and scale with zero manual labor.";
+    }
+
     const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
+      model: 'gemini-2.5-flash',
       contents: userInput,
       config: {
         systemInstruction: `You are the Let's Flow AI Agent. Keep your answers brief, professional, and helpful. 

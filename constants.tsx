@@ -45,5 +45,9 @@ export const FAQS: FAQItem[] = [
   {
     question: "What are the benefits of removing manual labor?",
     answer: "By automating repetitive communication, you reduce costs, eliminate human error, and allow your brand to scale 24/7 without being limited by headcount."
+  },
+  {
+    question: "How can I contact the Let's Flow team directly?",
+    answer: "You can call or message us directly on WhatsApp at +91 84829 34502, or email our management desk at letsflowmanagement@gmail.com. We also welcome direct project briefs submitted through our contact form."
   }
 ];

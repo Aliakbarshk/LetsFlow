@@ -4,6 +4,13 @@ import { Sparkles, ArrowRight, Layers, Zap } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const Hero: React.FC = () => {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
       {/* Background Ambience */}
@@ -36,18 +43,29 @@ const Hero: React.FC = () => {
 
         <ScrollReveal delay={700}>
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <a href="#demo" className="group flex items-center space-x-4 px-10 py-5 bg-[#25d366] text-black font-black rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(37,211,102,0.2)]">
+            <button 
+              type="button"
+              onClick={() => scrollTo('demo')}
+              className="group flex items-center space-x-4 px-10 py-5 bg-[#25d366] text-black font-black rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(37,211,102,0.2)] cursor-pointer"
+            >
               <span className="uppercase tracking-widest text-xs">Explore the Demo</span>
               <ArrowRight size={18} />
-            </a>
-            <button className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-all uppercase tracking-widest text-xs">
+            </button>
+            <button 
+              type="button"
+              onClick={() => scrollTo('services')}
+              className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-all uppercase tracking-widest text-xs cursor-pointer active:scale-95"
+            >
               View Workflows
             </button>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={900} className="w-full mt-24">
-          <div className="aspect-[21/9] w-full bg-[#0a0a0a] rounded-[2.5rem] border border-white/5 flex items-center justify-center relative overflow-hidden group">
+          <div 
+            onClick={() => scrollTo('demo')}
+            className="aspect-[21/9] w-full bg-[#0a0a0a] rounded-[2.5rem] border border-white/5 flex items-center justify-center relative overflow-hidden group cursor-pointer"
+          >
             <div className="absolute inset-0 bg-gradient-to-t from-[#25d366]/5 to-transparent"></div>
             
             {/* Visual indicator of bulk processing */}
@@ -58,7 +76,7 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="absolute inset-x-0 bottom-8 flex flex-col items-center space-y-4">
-              <p className="text-[10px] uppercase tracking-[0.5em] font-black text-white/20">Handling 10k+ Simultaneous Queries</p>
+              <p className="text-[10px] uppercase tracking-[0.5em] font-black text-white/20 group-hover:text-[#25d366] transition-colors">Handling 10k+ Simultaneous Queries • Click to test demo</p>
             </div>
             {/* Minimal Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
