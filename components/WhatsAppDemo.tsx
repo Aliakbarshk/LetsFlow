@@ -189,7 +189,7 @@ const WhatsAppDemo: React.FC = () => {
     } catch {
       const fallbackMsg: Message = {
         id: (Date.now() + 1).toString(),
-        text: "Let's Flow is standing by. We deploy WhatsApp bots handling 10,000+ simultaneous queries with zero manual labor.",
+        text: "Letsflow is standing by. We deploy WhatsApp bots handling 10,000+ simultaneous queries with zero manual labor.",
         sender: 'agent',
         timestamp: new Date()
       };
@@ -287,7 +287,7 @@ const WhatsAppDemo: React.FC = () => {
                 <div className="w-24 h-24 rounded-full bg-[#202c33] border-2 border-[#25d366] flex items-center justify-center text-4xl shadow-xl">
                   {activeCall === 'video' ? '📹' : '🤖'}
                 </div>
-                <h3 className="text-xl font-black uppercase tracking-wider text-white">Let's Flow Voice Agent</h3>
+                <h3 className="text-xl font-black uppercase tracking-wider text-white">Letsflow Voice Agent</h3>
                 <p className="text-xs text-[#25d366] font-bold tracking-widest uppercase animate-pulse">
                   {activeCall === 'video' ? 'Encrypted HD Video Session' : 'Voice Automation Protocol Connected'}
                 </p>
@@ -375,7 +375,7 @@ const WhatsAppDemo: React.FC = () => {
                   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" className="w-6 h-6" alt="WA" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold">Let's Flow Bot Agent</h3>
+                  <h3 className="text-sm font-bold">Letsflow Bot Agent</h3>
                   <span className="text-[10px] text-[#25d366] font-bold tracking-widest flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#25d366] animate-pulse"></span>
                     ONLINE

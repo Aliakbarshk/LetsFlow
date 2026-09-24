@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             <Link to="/" onClick={handleLogoClick} className="flex items-center space-x-4 group">
               <img
                 src={logo}
-                alt="Let's Flow"
+                alt="Letsflow"
                 className="h-12 w-auto object-contain"
                 loading="lazy"
               />
@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/10">
-            &copy; {new Date().getFullYear()} Let's Flow - Scale Smarter.
+            &copy; {new Date().getFullYear()} Letsflow - Scale Smarter.
           </p>
         </div>
       </div>

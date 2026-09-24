@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
 
     if (channel === 'whatsapp') {
       const waText = encodeURIComponent(
-        `Hello Let's Flow team, I would like to initiate an automation project.\n` +
+        `Hello Letsflow team, I would like to initiate an automation project.\n` +
         `Name: ${formData.name || 'Prospective Client'}\n` +
         `Email: ${formData.email || 'Not provided'}\n` +
         `Objective: ${formData.message || 'Custom WhatsApp / workflow automation'}`
@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
     } else if (channel === 'email') {
       const subject = encodeURIComponent(`Project Initiation - ${formData.name || 'New Client'}`);
       const body = encodeURIComponent(
-        `Hello Let's Flow Team,\n\n` +
+        `Hello Letsflow Team,\n\n` +
         `Name: ${formData.name || 'Not provided'}\n` +
         `Email: ${formData.email || 'Not provided'}\n` +
         `Objective: ${formData.message || 'Custom WhatsApp / workflow automation'}\n\n` +
@@ -136,7 +136,7 @@ const ContactForm: React.FC = () => {
                       )}
                     </button>
                     <a
-                      href="https://wa.me/918482934502?text=Hello%20Let's%20Flow%20team,%20I%20am%20interested%20in%20your%20WhatsApp%20automation%20services."
+                      href="https://wa.me/918482934502?text=Hello%20Letsflow%20team,%20I%20am%20interested%20in%20your%20WhatsApp%20automation%20services."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2.5 rounded-full bg-[#25d366]/20 hover:bg-[#25d366] text-[#25d366] hover:text-black transition-all cursor-pointer flex items-center justify-center"
@@ -186,7 +186,7 @@ const ContactForm: React.FC = () => {
                       )}
                     </button>
                     <a
-                      href="mailto:letsflowmanagement@gmail.com?subject=Automation%20Inquiry%20-%20Let's%20Flow"
+                      href="mailto:letsflowmanagement@gmail.com?subject=Automation%20Inquiry%20-%20Letsflow"
                       className="p-2.5 rounded-full bg-[#00f2ff]/20 hover:bg-[#00f2ff] text-[#00f2ff] hover:text-black transition-all cursor-pointer flex items-center justify-center"
                       title="Send Email"
                     >
@@ -200,7 +200,7 @@ const ContactForm: React.FC = () => {
                 </span>
                 
                 <a
-                  href="mailto:letsflowmanagement@gmail.com?subject=Automation%20Inquiry%20-%20Let's%20Flow"
+                  href="mailto:letsflowmanagement@gmail.com?subject=Automation%20Inquiry%20-%20Letsflow"
                   className="text-lg md:text-2xl font-black text-white group-hover:text-[#00f2ff] transition-colors tracking-tight block break-all"
                 >
                   letsflowmanagement@gmail.com
@@ -342,7 +342,7 @@ const ContactForm: React.FC = () => {
                 Choose Contact Medium
               </h3>
               <p className="text-white/40 text-sm max-w-sm mx-auto leading-relaxed">
-                How would you like to connect with the Let's Flow team?
+                How would you like to connect with the Letsflow team?
               </p>
             </div>
 

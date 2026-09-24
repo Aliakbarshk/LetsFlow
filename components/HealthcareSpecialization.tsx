@@ -96,7 +96,7 @@ const HealthcareSpecialization: React.FC = () => {
           <div className="max-w-md space-y-4 text-white/50 text-sm sm:text-base leading-relaxed">
             <p>
               Hospitals and healthcare organizations operate around repetitive, high-touch administrative tasks. 
-              Let's Flow designs reliable automation systems for non-clinical communication, patient enquiry routing, and administrative follow-ups.
+              Letsflow designs reliable automation systems for non-clinical communication, patient enquiry routing, and administrative follow-ups.
             </p>
             {/* Non-clinical compliance badge */}
             <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-start space-x-3">

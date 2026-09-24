@@ -7,14 +7,14 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   useEffect(() => {
-    document.title = "Let's Flow | Intel & FAQs";
+    document.title = "Letsflow | Intel & FAQs";
   }, []);
 
   return (
     <div className="pt-40 pb-20 max-w-3xl mx-auto px-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
       <h1 className="text-5xl font-bold mb-4 text-center">Frequently Asked Questions</h1>
       <p className="text-gray-400 text-center mb-16">
-        Everything you need to know about starting your automation journey with Let's Flow.
+        Everything you need to know about starting your automation journey with Letsflow.
       </p>
 
       <div className="space-y-4">

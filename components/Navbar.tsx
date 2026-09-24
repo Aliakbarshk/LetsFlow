@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: "Let's Flow", path: '/', action: handleFlowClick },
+    { name: "Letsflow", path: '/', action: handleFlowClick },
     { name: 'Healthcare', path: '/#healthcare', action: () => handleScrollToSection('healthcare') },
     { name: 'Systems', path: '/#services', action: () => handleScrollToSection('services') },
     { name: 'Intel', path: '/faq' },
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
             <Link to="/" onClick={handleFlowClick} className="flex items-center space-x-3 group">
               <img
                 src={logo}
-                alt="Let's Flow"
+                alt="Letsflow"
                 className="h-8 md:h-9 w-auto object-contain"
                 loading="lazy"
               />

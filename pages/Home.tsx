@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = "Let's Flow | Hospital & Business Automation Systems";
+    document.title = "Letsflow | Hospital & Business Automation Systems";
   }, []);
 
   useEffect(() => {

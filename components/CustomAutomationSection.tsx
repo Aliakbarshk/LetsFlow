@@ -135,7 +135,7 @@ const CustomAutomationSection: React.FC = () => {
                 </h3>
               </div>
               <p className="text-xs sm:text-sm text-white/50 max-w-md">
-                Let's Flow is an automation engineering partner. We don't just deploy a disconnected chatbot; we unite all your operational touchpoints into a unified stack.
+                Letsflow is an automation engineering partner. We don't just deploy a disconnected chatbot; we unite all your operational touchpoints into a unified stack.
               </p>
             </div>
 

@@ -48,7 +48,7 @@ export const SERVICES: ServiceItem[] = [
 
 export const FAQS: FAQItem[] = [
   {
-    question: "What makes Let's Flow specialized in hospital and healthcare automation?",
+    question: "What makes Letsflow specialized in hospital and healthcare automation?",
     answer: "Hospitals handle repetitive operational volume every day—managing patient enquiries, scheduling appointments, sending reminders, and organizing incoming leads. We engineer reliable operational systems using official WhatsApp API, webhooks, databases, and schedulers to eliminate manual bottlenecks, allowing administrative teams to operate smoothly."
   },
   {
@@ -68,7 +68,7 @@ export const FAQS: FAQItem[] = [
     answer: "Yes. We build exclusively using official Meta WhatsApp Business API channels, adhering to security guidelines, template messaging regulations, and privacy standards."
   },
   {
-    question: "How can I contact the Let's Flow team to discuss my workflow?",
+    question: "How can I contact the Letsflow team to discuss my workflow?",
     answer: "You can call or WhatsApp our desk at +91 84829 34502, email letsflowmanagement@gmail.com, or use the project initiation tool on this page to tell us what your team does manually."
   }
 ];
